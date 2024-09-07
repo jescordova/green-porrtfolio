@@ -1,0 +1,122 @@
+---
+import Btn from "../../../components/Btn.astro";
+import SocialMedia from "../../../components/SocialMedia.astro";
+---
+
+<section class="home" id="home">
+    <div class="container">
+        <header class="title-header">
+            <img src="/public/petros.svg" alt="User Image">
+        </header>
+        <article class="content-article">
+            <h1>
+                <span>Hi, Myself</span>
+                <span>Petros <strong>Córdova</strong> </span>
+                <span>And I'm a <strong>Front-EndDeveloper</strong></span>
+            </h1>
+            <p>
+                Passionate about user experience, I create intuitive, aesthetic and responsive web interfaces. My skills: <strong>HTML5</strong>, <strong>CSS3</strong>, <strong>JavaScript</strong>, <strong>Astro</strong>, <strong>Vue</strong>. I like taking on new challenges and collaborating with creative teams.
+            </p>
+            <!-- social media buttons component -->
+             <div class="media">
+                 <SocialMedia />
+             </div>
+            <!-- Download button component -->
+             <div class="btn">
+                 <Btn url="#" name="download CV" icon="downvote"/>
+             </div>
+        </article>
+    </div>
+</section>
+
+<style>
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .title-header{
+            flex: 1;
+            border: var(--border-1);
+            border-radius: 100%;
+            display: flex;
+            box-shadow: var(--box-shadow);
+            padding: 1rem;
+            animation: floatImg 4s ease-in-out infinite;
+            max-width: 300px;
+            img{
+                border-radius: 100%;
+                border: 1rem solid var(--color-001);
+
+            }
+        }
+        .content-article{
+            flex: 2;
+            order: 1;
+            h1{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-weight: 100;
+                font-size: 3rem;
+                line-height: 1;
+                span{
+                    strong{
+                        color: var(--active-1);
+                    }
+                }
+                span:first-child{
+                    font-size: 2rem;
+                }
+                span:last-child{
+                    text-transform: uppercase;
+                    font-size: 1.2rem;
+                }
+            }
+            p{
+                margin-top: 0.5rem;
+                text-align: center;
+                strong{
+                    color: var(--active-1);
+                    font-weight: 100;
+                }
+            }
+            .media{
+                display: flex;
+                justify-content: center;
+            }
+            .btn{
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+    @media screen and (min-width: 636px){
+        .container{
+            flex-direction: row;
+            justify-content: start;
+            gap: 3rem;
+            .title-header{
+                order: 2;
+            }
+            .content-article{
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                
+                h1{
+                    align-items: start;
+                }
+                p{
+                    text-align: left;
+                }
+            }
+        }
+    }
+    @keyframes floatImg{
+        0% {transform: translate(0);}
+        50% {transform: translateY(-2.5rem)};
+        100% {transform: translateY(0);}
+    }
+</style>
