@@ -1,0 +1,22 @@
+---
+import SocialBtn from "../components/SocialBtn.astro";
+---
+
+<div class="social-media">
+    <SocialBtn platform="linkedin" username="astrodotbuild" />
+    <SocialBtn platform="discord" username="withastro" />
+    <SocialBtn platform="youtube" username="astrodotbuild" />
+    <SocialBtn platform="facebook" username="withastro" />
+    <SocialBtn platform="twitter" username="astrodotbuild" />
+    <SocialBtn platform="instagram" username="withastro" />
+</div>
+
+<style>
+    .social-media{
+        display: flex;
+        gap: 0.5rem;
+        justify-content: start;
+        align-items: center;
+        margin: 1.8rem 0;
+    }
+</style>
