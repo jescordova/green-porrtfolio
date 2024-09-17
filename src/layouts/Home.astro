@@ -1,0 +1,107 @@
+---
+import SocialMedia from "../components/SocialMedia.astro";
+import Btn from "../components/Btn.astro";
+---
+
+<section class="home" id="home">
+    <div class="header-home">
+        <div class="user-img">
+            <img src="/public/petros.svg" alt="User Image">
+        </div>
+    </div>
+    <div class="content-home">
+        <h1>
+            <span>Hi, Myself</span>
+            <span>Petros <strong>Córdova</strong> </span>
+            <span>And I'm a <strong>Front-End</strong> Developer</span>
+        </h1>
+        <p>
+            Passionate about user experience, I create intuitive, aesthetic and responsive web interfaces. My skills: <strong>HTML5</strong>, <strong>CSS3</strong>, <strong>JavaScript</strong>, <strong>Astro</strong>, <strong>Vue</strong>. I like taking on new challenges and collaborating with creative teams.
+        </p>
+        <!-- social media buttons component -->
+        <div class="media">
+            <SocialMedia />
+        </div>
+        <!-- Download button component -->
+        <div class="button">
+            <Btn url="#" name="download CV" icon="downvote"/>
+        </div>
+    </div>
+</section>
+
+<style>
+    .home{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    .header-home{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .user-img{
+        flex: 1;
+        width: 300px;
+        border: 4px double var(--color-default);
+        border-radius: 100%;
+        padding: 0.5rem;
+        display: flex;
+        animation: floatImg 4s ease-in-out infinite;
+        box-shadow: var(--box-shadow);
+    }
+    img{
+        width: 100%;
+        border-radius: 100%;
+        border: 2rem solid #ffffff;
+    }
+    .content-home{
+        flex: 2;
+        text-align: center;
+        h1{
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            span:first-child{
+                font-size: 2rem;
+            }
+            span:last-child{
+                text-transform: uppercase;
+                font-size: 1.3rem;
+            }
+        }
+        p{
+            margin: 1rem 0;
+        }
+    }
+	@keyframes floatImg{
+        0% {transform: translateY(0);}
+        50% {transform: translateY(-2.4rem);}
+        100% {transform: translateY(0);}
+    }
+    /* Medium devices (tablets, 768px and up) */
+    @media (min-width: 768px) {
+        .home{
+            flex-direction: row;
+            padding: 1rem 2rem;
+        }
+        .header-home{
+            order: 2;
+        }
+        .content-home{
+            order: 1;
+            text-align: left;
+            h1{
+                align-items: start;
+            }
+            .media,
+            .button{
+                justify-content: start;
+            }
+        }
+    }
+</style>
