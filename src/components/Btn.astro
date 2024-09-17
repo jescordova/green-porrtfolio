@@ -2,30 +2,37 @@
 const {url, name, icon} = Astro.props;
 ---
 
-<div class="btn">
+<div class="link">
     <a href={url}>{name} <i class=`bx bxs-${icon}`></i></a>
 </div>
 
 <style>
-    .btn{
+    .link{
         display: flex;
+        justify-content: start;
+        align-items: start;
         a{
-            background-color: var(--active-2);
-            color: var(--color-50);
+            background-color: var(--active);
+            color: var(--color-90);
             padding: 0.7rem 1.5rem;
-            border: 2px solid var(--color-00);
+            border: 2px solid var(--active);
             border-radius: 4rem;
             text-transform: capitalize;
             display: flex;
-            justify-content: center;
             align-items: center;
             gap: 0.5rem;
             transition: .3s ease-in-out;
+            i{
+                color: var(--color-90);
+            }
         }
         a:hover{
-            background-color: var(--color-50);
-            color: var(--active-1);
-            border: 2px solid var(--active-1);
+            background-color: transparent;
+            color: var(--active);
+            border: 2px solid var(--active);
+            i{
+                color: var(--active);
+            }
         }
     }
 </style>
