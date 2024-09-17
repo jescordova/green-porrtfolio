@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import Footer from "../components/Footer.astro";
 
 const {title, description} = Astro.props;
 ---
@@ -15,11 +16,8 @@ const {title, description} = Astro.props;
 </head>
 <body>
     <nav></nav>
-    <header></header>
-    <main>
-        <slot />
-    </main>
-    <footer></footer>
+    <slot />
+    <Footer />
     <script> 
         import "../scripts/main";
     </script>
