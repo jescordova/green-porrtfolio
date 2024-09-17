@@ -1,0 +1,103 @@
+---
+import Btn from "../components/Btn.astro";
+---
+
+<section class="about" id="about">
+    <div class="header-about">
+        <div class="user-img">
+            <img src="/public/moi.png" alt="User Image">
+        </div>
+    </div>
+    <div class="content-about">
+        <h2><strong>about</strong> me</h2>
+        <h3><strong>Front-End </strong>developer</h3>
+        <div class="info">
+            <p>
+                Passionate about the web and creating intuitive user experiences, I am a junior front-end developer in constant evolution. My curiosity leads me to constantly explore new technologies and keep myself informed of the latest trends.
+            </p>
+            <!-- <p>
+                I have acquired a solid foundation in <span>HTML</span> , <span>CSS</span> and <span>JavaScript</span>, and I master the fundamentals of frameworks like <span>Astro</span> and <span>Vue</span>. I also have a good understanding of the principles of accessibility and responsive design.
+            </p> -->
+            <!-- <p>
+                During my personal and academic projects, I have developed skills in:
+            </p> -->
+            <ul>
+                <li><strong>Development of user interfaces:</strong> Creation of mockups, integration of designs, optimization for different browsers</li>
+                <li><strong>Version management:</strong> Use of <span>Git</span> to collaborate effectively in a team</li>
+                <li><strong>Performance optimization:</strong> Minification, compression, caching</li>
+            </ul>
+            <!-- <p>            
+                I am particularly interested in the challenges related to improving the user experience and creating high-performance websites. I am convinced that my skills and motivation will make me a valuable asset to your team.
+            </p> -->
+            <div class="button">
+                <Btn url="#" name="read more" icon=""/>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .about{
+        /* background: var(--color-9); */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    .header-about{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .user-img{
+        width: 350px;
+        border: 4px double var(--color-default);
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        display: flex;
+    }
+    .user-img:hover{
+        box-shadow: var(--box-shadow);
+        animation: shake 0.5s ease-in-out infinite;
+    }
+    img{
+        border-radius: 0.5rem;
+        width: 100%;
+    }
+    .content-about{
+        flex: 1;
+        text-align: center;
+    }
+    .button{
+        margin-top: 1rem;
+    }
+
+    @keyframes shake {
+        0% { transform: translate(1px, 1px) rotate(0deg); }
+        10% { transform: translate(-1px, -2px) rotate(-1deg); }
+        20% { transform: translate(-3px, 0px) rotate(1deg); }
+        30% { transform: translate(3px, 2px) rotate(0deg); }
+        40% { transform: translate(1px, -1px) rotate(1deg); }
+        50% { transform: translate(-1px, 2px) rotate(-1deg); }
+        60% { transform: translate(-3px, 1px) rotate(0deg); }
+        70% { transform: translate(3px, 1px) rotate(-1deg); }
+        80% { transform: translate(-1px, -1px) rotate(1deg); }
+        90% { transform: translate(1px, 2px) rotate(0deg); }
+        100% { transform: translate(1px, -2px) rotate(-1deg); }
+    }
+
+    /* Medium devices (tablets, 768px and up) */
+    @media (min-width: 768px) {
+        .about{
+            flex-direction: row;
+            padding: 1rem 2rem;
+        }
+        .content-about{
+            text-align: left;
+            .button{
+                justify-content: start;
+            }
+        }
+    }
+</style>
