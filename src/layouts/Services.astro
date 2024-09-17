@@ -1,0 +1,88 @@
+---
+import Btn from "../components/Btn.astro";
+---
+
+<section class="services" id="services">
+    <div class="header-services">
+        <h2>my <strong>services</strong></h2>
+    </div>
+    <div class="content-services">
+        <article>
+            <i class="bx bx-code-alt"></i>
+            <h3>web development</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vel tempore odio quas obcaecati nam dolores maxime natus rem asperiores libero blanditiis fuga velit culpa, mollitia nulla atque quasi explicabo.</p>
+            <div class="button">
+                <Btn url="#" name="read more"/>
+            </div>
+        </article>
+        <article>
+            <i class="bx bxs-palette"></i>
+            <h3><span>ui/ux</span> designing</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, saepe animi! Perferendis quos eaque adipisci accusantium, enim officiis non, consequuntur inventore eum explicabo, quasi rerum repudiandae facere tempore debitis amet.</p>
+            <div class="button">
+                <Btn url="#" name="read more"/>
+            </div>
+        </article>
+        <article>
+            <i class="bx bxl-android"></i>
+            <h3>app development</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic dolorum sunt quas earum fuga in, dicta pariatur ratione sint et obcaecati fugit saepe natus dolore quasi possimus beatae dolores iste.</p>
+            <div class="button">
+                <Btn url="#" name="read more"/>
+            </div>
+        </article>
+    </div>
+</section>
+
+<style>
+    .services{
+        /* background: var(--color-5); */
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    .content-services{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    article{
+        border-radius: 0.5rem;
+        border: 5px double rgba(3, 198, 252, 0.3);
+        padding: 1rem;
+        i{
+            font-size: 6rem;
+            color: var(--color-default);
+        }
+        h3{
+            font-weight: 300;
+            span{
+                text-transform: uppercase;
+            }
+        }
+        p{
+            margin: 1rem 0;
+        }
+        transition: .3s ease-in-out;
+    }
+    article:hover{
+        box-shadow: var(--box-shadow);
+    }
+    .button{
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Medium devices (tablets, 768px and up) */
+    @media (min-width: 768px) {
+        .content-services{
+            flex: inherit;
+            flex-direction: row;
+        }
+       
+    }
+</style>
