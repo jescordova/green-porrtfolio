@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+
+:root{
+    --color-90: #001419;
+    --color-80: #012832;
+    --color-70: #013b4c;
+    --color-60: #014f65;
+    --color-50: #02637e;
+    --color-40: #027797;
+    --color-30: #028bb0;
+    --color-20: #029eca;
+    --color-10: #03b2e3;
+    --color-default: #03c6fc;
+    --color-01: #1cccfc;
+    --color-02: #35d1fd;
+    --color-03: #4fd7fd;
+    --color-04: #68ddfd;
+    --color-05: #81e3fe;
+    --color-06: #9ae8fe;
+    --color-07: #b3eefe;
+    --color-08: #cdf4fe;
+    --color-09: #e6f9ff;
+    --color-active: #c5fb04;
+
+    --color-gradient: radial-gradient(
+        circle, 
+        var(--color-50), 
+        var(--color-60), 
+        var(--color-70), 
+        var(--color-80), 
+        var(--color-90)
+    );
+
+    --bg-color: var(--color-gradient);
+    --active: var(--color-active); 
+    --box-shadow: 0 0 5rem var(--color-default);
+}
+
+/* ============= *
+ * GLOBAL STYLE 
+ =============== */
+
+*{
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Onest", system-ui;
+    margin: 0;
+    padding: 0;
+    border: none;
+    list-style-type: none;
+    color: #ffffff;
+}
+
+html{
+    overflow-x: hidden;
+    font-size: 16px;
+    line-height: normal;
+}
+
+body{
+    background: var(--bg-color) no-repeat;
+    color: rgba(255,255,255, 0.5);
+}
+
+/* ================
+ * YASTA-CODE STYLE 
+ ================== */
+
+/* nav design */
+/* header design */
+
+/* main design */
+main{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* section design */
+section{
+    min-height: 100vh;
+    /* border: 0.1rem solid rgba(3, 198, 252, 0.3); */
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+h1,
+h2,
+h3{
+    font-weight: 100;
+    text-transform: capitalize;
+    font-size: 3.5rem;
+
+}
+h2{
+    font-size: 3rem;
+}
+h3{
+    font-size: 2rem;
+}
+strong{
+    color: var(--color-default);
+    font-weight: 300;
+}
+p{
+    font-weight: 100;
+}
+.media,
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* home style */
+
+
+/* =============*
+ * FLEXBOX STYLE 
+ ============== */
+
+ footer{
+    background: rgba(0, 0, 0, 0.3);
+    border: 0.1rem solid rgba(3, 198, 252, 0.3);
+    border-radius: 0.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 2rem;
+    padding: 1rem;
+
+ }
+
+.flexD{
+    background: var(--color-c);
+}
+.justifyC{
+    background: var(--color-9);
+}
+.alignI{
+    background: var(--color-5);
+}
+.alignC{
+    background: var(--color-3);
+}
+
+.flexbox article{
+    flex: 1 1 100%;
+    border: 1px solid var(--color-a);
+    border-radius: 0.5rem;
+}
+.flexbox h2{
+    flex: 1 1 100%;
+    background: var(--color-9);
+    padding:  0.5rem 1rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+    border-bottom: 1px solid var(--color-a);
+    font-weight: 100;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    span{
+         font-style: italic;
+         color: var(--active-a);
+         font-size: 1.2rem;
+         font-weight: 100;
+     }
+}
+.flexbox .content-article{
+    padding: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    .item{
+        border: 1px solid var(--color-b);
+        padding:  0.3rem 1rem;
+        border-radius: 0.5rem;
+        text-transform: uppercase;
+        font-size: 2.5rem;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+/* @media (min-width: 576px) {} */
+	
+/* Medium devices (tablets, 768px and up) */
+/* @media (min-width: 768px) {} */
+
+/* Large devices (desktops, 992px and up) */
+/* @media (min-width: 992px) {} */
+
+/* X-Large devices (large desktops, 1200px and up) */
+/* @media (min-width: 1200px) {} */
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+/* @media (min-width: 1400px) {} */
