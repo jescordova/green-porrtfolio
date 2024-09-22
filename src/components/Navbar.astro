@@ -1,10 +1,130 @@
 ---
 
 ---
-<div class="nav-links">
-    <a href="#home" class="active">home</a>
-    <a href="#about">about</a>
-    <a href="#services">services</a>
-    <a href="#projects">projects</a>
-    <a href="#contact">contact</a>
-</div>
+
+<nav class="navbar">
+    <div class="container">
+        <div class="logo">
+            <a href="/">
+                <i class='bx bxs-category'></i> yasta code
+            </a>
+        </div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="nav-links">
+            <a href="#home" class="active">home</a>
+            <a href="#about">about</a>
+            <a href="#services">services</a>
+            <a href="#projects">projects</a>
+            <a href="#contact">contact</a>
+        </div>
+    </div>
+</nav>
+
+<style>
+    .navbar{
+        background-color: var(--color-80);
+        position: fixed;
+        top: 0; 
+        left: 0;
+        right: 0;
+        z-index: 999;
+        padding: 0 0.5rem;
+        .container{
+            padding: 0.5rem;
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            text-transform: capitalize;
+        }
+    }
+    .logo{
+        display: flex;
+        align-items: center;
+        a{
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            transition: 0.3s ease;
+        }
+        a:hover{
+            color: var(--color-10);
+        } 
+        i{
+            font-size: 2rem;
+            color: var(--active);
+        }
+    }
+    .hamburger{
+        cursor: pointer;
+        border: 1px solid var(--color-09);
+        padding: 0.2rem 0.5rem;
+        border-radius: 0.3rem;
+        transition: 0.3s ease;
+        .line{
+            background: var(--color-09);
+            width: 25px;
+            height: 3px;
+            margin: 5px 0;
+        } 
+       
+    }
+    .hamburger:hover{
+        background: var(--color-10);
+    }
+    .nav-links{
+        flex: 100%;
+        margin-top: 0.7rem;
+        display: none;
+        a{
+            display: block;
+            text-align: center;
+            background: var(--color-70);
+            padding: 0.5rem 0;
+            margin-top: 0.1rem;
+            transition: 0.3s ease-in-out;
+        }
+        a:hover,
+        a:focus{
+            background-color: var(--color-80);
+            transform: scale(1.1);
+            color: var(--color-10)
+        }
+        .active{
+            color: var(--active);
+        }
+    }
+    .expanded {
+        display: unset;
+    }
+    @media (min-width: 768px){
+        .nav-links{
+            flex: inherit;
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 0;
+            a{
+                display: inline-block;
+                background: inherit;
+                transition: .3s ease;
+            }
+            a:hover{
+                background: inherit;
+                transform: translateY(-0.2rem);
+                border-bottom: 1px solid var(--color-01);
+            }
+        }
+        .hamburger{
+            display: none;
+        }
+    }
+</style>
