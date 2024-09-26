@@ -1,15 +1,43 @@
 ---
 const platform = "github";
-const username = "petros";
+const username = "PetrosCordova";
 ---
 
 <footer>
-    <p>Learn more about my projects on <a href={`https://www.${platform}.com/${username}`}>{platform}</a>!</p>
+    <div class="text">
+        <p>Learn more about my projects on 
+            <a href={`https://www.${platform}.com/${username}`} target="_blank">{platform}</a>
+        </p>
+        <p>Copyright &copy; 2024 by @yastacode | All Rights Reserved</p>
+    </div>
+    <div class="icon-top">
+        <a href="/#home"><i class='bx bxs-to-top'></i></a>
+    </div>
 </footer>
-
 <style>
     footer{
-        /* background-color: #000000; */
-        height: 50vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .icon-top{
+        a{
+            display: block;
+            background-color: var(--active);
+            padding: 1rem 1.5rem;
+            border: 3px solid var(--active);
+            border-radius: 0.5rem;
+            i{
+                font-size: 2rem;
+                color: var(--color-50);
+            }
+        }
+        a:hover{
+            border: 3px solid var(--active);
+            background: transparent;
+            i{
+                color: var(--active);
+            }
+        }
     }
 </style>
