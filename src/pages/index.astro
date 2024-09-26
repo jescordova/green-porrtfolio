@@ -1,18 +1,18 @@
 ---
 import Contact from "../layouts/Contact.astro";
-import Services from "../layouts/Services.astro";
 import Projects from "../layouts/Projects.astro";
+import Services from "../layouts/Services.astro";
 import About from "../layouts/About.astro";
 import Home from "../layouts/Home.astro";
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
+import Navbar from "../components/Navbar.astro";
 const title = "Yasta Code";
 const description = "Responsive Web Site with Astro, CSS and JavaScript | Yasta";
 ---
 
 <Layout title={title} description={description}>
+    <Navbar />
     <main class="yasta-code">
-        <Header></Header>
         <Home></Home>
         <About></About>
         <Services></Services>
