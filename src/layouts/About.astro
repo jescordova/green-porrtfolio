@@ -2,16 +2,16 @@
 import Btn from "../components/Btn.astro";
 ---
 
-<section class="about" id="about">
-    <div class="header-about">
-        <div class="user-img">
-            <img src="moi.png" alt="User Image">
+<section class="about container" id="about">
+    <header class="picture">
+        <img src="moi.png" alt="User Image">
+    </header>
+    <article class="article">
+        <div class="title">
+            <h2><strong>about</strong> me</h2>
+            <h3><strong>Front-End </strong>developer</h3>
         </div>
-    </div>
-    <div class="content-about">
-        <h2><strong>about</strong> me</h2>
-        <h3><strong>Front-End </strong>developer</h3>
-        <div class="info">
+        <div class="content">
             <p>
                 Passionate about the web and creating intuitive user experiences, I am a junior front-end developer in constant evolution. My curiosity leads me to constantly explore new technologies and keep myself informed of the latest trends.
             </p>
@@ -20,59 +20,39 @@ import Btn from "../components/Btn.astro";
             </p> -->
             <!-- <p>
                 During my personal and academic projects, I have developed skills in:
-            </p> -->
-            <ul>
+            </p>-->
+            <!-- <ul>
                 <li><strong>Development of user interfaces:</strong> Creation of mockups, integration of designs, optimization for different browsers</li>
                 <li><strong>Version management:</strong> Use of <span>Git</span> to collaborate effectively in a team</li>
                 <li><strong>Performance optimization:</strong> Minification, compression, caching</li>
-            </ul>
-            <!-- <p>            
+            </ul>  -->
+            <!-- <p>           
                 I am particularly interested in the challenges related to improving the user experience and creating high-performance websites. I am convinced that my skills and motivation will make me a valuable asset to your team.
             </p> -->
-            <div class="button">
+            <div class="btns">
                 <Btn url="#" name="read more" icon=""/>
             </div>
         </div>
-    </div>
+    </article>
 </section>
 
 <style>
-    .about{
-        /* background: var(--color-9); */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
-    }
-    .header-about{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .user-img{
-        width: 350px;
-        border: 4px double var(--color-default);
-        border-radius: 0.5rem;
-        padding: 0.5rem;
-        display: flex;
-    }
-    .user-img:hover{
-        box-shadow: var(--box-shadow);
-        animation: shake 0.5s ease-in-out infinite;
-    }
     img{
-        border-radius: 0.5rem;
-        width: 100%;
+        border-radius: 1rem;
+        width: 300px;
+        border: 4px double var(--active);
+        padding: 0.3rem;
     }
-    .content-about{
-        flex: 1;
-        text-align: center;
-    }
-    .button{
-        margin-top: 1rem;
-    }
+    img:hover{
+        box-shadow: var(--box-shadow);
+        animation: shake .3s ease-in-out infinite;
 
+    }
+    .title{
+        h2{
+            font-size: 2.5rem;
+        }
+    }
     @keyframes shake {
         0% { transform: translate(1px, 1px) rotate(0deg); }
         10% { transform: translate(-1px, -2px) rotate(-1deg); }
@@ -85,18 +65,32 @@ import Btn from "../components/Btn.astro";
         80% { transform: translate(-1px, -1px) rotate(1deg); }
         90% { transform: translate(1px, 2px) rotate(0deg); }
         100% { transform: translate(1px, -2px) rotate(-1deg); }
-    }
+    } 
 
-    /* Medium devices (tablets, 768px and up) */
-    @media (min-width: 768px) {
+    /* Large devices (desktops, 992px and up) */
+    @media (min-width: 992px){
         .about{
+            display: flex;
             flex-direction: row;
-            padding: 1rem 2rem;
+            justify-content: space-between;
+            align-items: center;
+            gap: 3rem;
         }
-        .content-about{
+        .picture{
+            flex: 1;
+            text-align: right;
+            img{
+                width: 100%;
+            }
+        }
+        .article{
+            flex: 2;
             text-align: left;
-            .button{
-                justify-content: start;
+            p{
+                padding-left: 0;
+            }
+            .btns{
+                align-items: start;
             }
         }
     }
