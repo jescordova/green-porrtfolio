@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Qwitcher+Grypen:wght@400;700&display=swap');
 
 :root{
     --color-90: #001419;
@@ -33,7 +33,9 @@
 
     --bg-color: var(--color-gradient);
     --active: var(--color-active); 
-    --box-shadow: 0 0 5rem var(--color-default);
+    --box-shadow: 0 0 2rem var(--color-default);
+    --poppins: "Poppins", sans-serif;
+    --grypem: "Qwitcher Grypen", serif;
 }
 
 /* ============= *
@@ -44,12 +46,12 @@
     scroll-behavior: smooth;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: "Onest", system-ui;
+    font-family: var(--poppins);
     margin: 0;
     padding: 0;
     border: none;
     list-style-type: none;
-    color: #ffffff;
+    color: var(--color-09);
 }
 
 html{
@@ -60,17 +62,8 @@ html{
 
 body{
     background: var(--bg-color) no-repeat;
-    color: rgba(255,255,255, 0.5);
 }
 
-/* ================
- * YASTA-CODE STYLE 
- ================== */
-
-/* nav design */
-/* header design */
-
-/* main design */
 main{
     max-width: 1200px;
     margin: 0 auto;
@@ -81,35 +74,40 @@ main{
     gap: 2rem;
 }
 
-/* section design */
 section{
     min-height: 100vh;
-    /* border: 0.1rem solid rgba(3, 198, 252, 0.3); */
+    /* border: 0.1rem solid var(--color-50); */
     border-radius: 0.5rem;
     padding: 1rem;
+    width: 100%;
 }
-
-h1,
+h1{
+    font-family: var(--grypem);
+}
 h2,
 h3{
     font-weight: 100;
     text-transform: capitalize;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
+    strong{
+        color: var(--color-default);
+        font-weight: 100;
+    }
+}
 
-}
-h2{
-    font-size: 3rem;
-}
-h3{
-    font-size: 2rem;
-}
-strong{
-    color: var(--color-default);
-    font-weight: 300;
-}
 p{
     font-weight: 100;
+    strong{
+        font-weight: 100;
+        color: var(--color-default);
+    }
 }
+
+img{
+    /* max-width: 450px; */
+    width: 100%;
+}
+
 .media,
 .button{
     display: flex;
@@ -117,70 +115,147 @@ p{
     align-items: center;
 }
 
-/* home style */
+footer{
+   background: rgba(0, 0, 0, 0.3);
+   border: 0.1rem solid rgba(3, 198, 252, 0.3);
+   border-radius: 0.5rem;
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 1rem;
 
+}
+
+/* =============*===
+ * YASTA CODE STYLE 
+ ================= */
+ .yasta-code{
+    section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    article{
+        text-align: center;
+        h2{
+            font-size: 2rem;
+        }
+        h3{
+            text-transform: uppercase;
+            font-size: 1.5rem;
+        }
+        p{
+            margin: 1rem 0;
+        }
+        .btns{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+    }
+ }
+ 
 
 /* =============*
  * FLEXBOX STYLE 
  ============== */
-
- footer{
-    background: rgba(0, 0, 0, 0.3);
-    border: 0.1rem solid rgba(3, 198, 252, 0.3);
-    border-radius: 0.5rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    margin-top: 2rem;
-    padding: 1rem;
-
+ .css-flexbox{
+    .container{
+        min-height: auto;
+        background-color: rgba(230, 231, 233, 0.2);
+        border: 1px solid rgba(230, 231, 233, 0.2);
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .title{
+        h3{
+            text-transform: none;
+        }
+    }
+    p{
+        span{
+            color: var(--color-default);
+        }
+    }
+    .article{
+        background-color: rgba(142, 155, 182, 0.3);
+        border: 1px solid rgba(142, 155, 182, 0.3);
+        padding: 1rem;
+        border-radius: 0.5rem;
+        .title{
+            background-color: var(--color-80);
+            border: 1px solid rgba(230, 231, 233, 0.3);
+            padding: 0.7rem 1rem;
+            border-radius: 0.5rem  0.5rem  0 0;
+            border-bottom: 0;
+            h4{
+                font-size: 1.2rem;
+                color: #9fca05;
+                display: flex;
+                justify-content: space-between;
+                font-weight: 300;
+                span{
+                    text-transform: capitalize;
+                    color: var(--color-30);
+                    font-size: 0.9rem;
+                    font-weight: 100;
+                }
+            }
+            p{
+                margin-top: 0.2rem;
+                font-style: italic;
+            }
+        }
+        .content{
+            background-color: var(--color-60);
+            border: 1px solid rgba(230, 231, 233, 0.3);
+            padding: 1rem;
+            border-radius: 0 0 0.5rem  0.5rem;
+            display: flex;
+            gap: 0.5rem;
+            .item{
+                background: var(--active);
+                padding: 0.5rem 1.5rem;
+                border-radius: 0.5rem;
+                color: var(--color-80);
+                text-transform: uppercase;
+                font-size: 2.5rem;
+                font-weight: 600;
+                text-align: center;
+                cursor: pointer;
+                transition: 0.3s ease-in-out;
+            }
+            .item:hover{
+                transform: translateY(-1rem);
+                box-shadow: 0 0 15px #000;
+                background: #f1f905;
+            }
+        }
+    }
  }
 
-.flexD{
-    background: var(--color-c);
-}
-.justifyC{
-    background: var(--color-9);
-}
-.alignI{
-    background: var(--color-5);
-}
-.alignC{
-    background: var(--color-3);
-}
 
-.flexbox article{
-    flex: 1 1 100%;
-    border: 1px solid var(--color-a);
-    border-radius: 0.5rem;
-}
-.flexbox h2{
-    flex: 1 1 100%;
-    background: var(--color-9);
-    padding:  0.5rem 1rem;
-    border-radius: 0.5rem 0.5rem 0 0;
-    border-bottom: 1px solid var(--color-a);
-    font-weight: 100;
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-    span{
-         font-style: italic;
-         color: var(--active-a);
-         font-size: 1.2rem;
-         font-weight: 100;
-     }
-}
-.flexbox .content-article{
-    padding: 1rem;
-    display: flex;
-    gap: 0.5rem;
-    .item{
-        border: 1px solid var(--color-b);
-        padding:  0.3rem 1rem;
-        border-radius: 0.5rem;
-        text-transform: uppercase;
-        font-size: 2.5rem;
+/* @media (min-width: 768px) {
+    .navbar{
+        .logo{
+        }
+        .nav-links{
+            flex: 1;
+            display: block;
+            position: static;
+            text-align: end;
+            a{
+                display: inline-block;
+            }
+        }
     }
-}
+    .hamburger {
+        display: none;
+    }
+}  */
 
 /* Small devices (landscape phones, 576px and up) */
 /* @media (min-width: 576px) {} */
