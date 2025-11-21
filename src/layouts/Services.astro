@@ -2,57 +2,53 @@
 import Btn from "../components/Btn.astro";
 ---
 
-<section class="services" id="services">
-    <div class="header-services">
+<section class="services container" id="services">
+    <header class="header">
         <h2>my <strong>services</strong></h2>
-    </div>
-    <div class="content-services">
-        <article>
+    </header>
+    <article class="article">
+        <div class="content">
             <i class="bx bx-code-alt"></i>
             <h3>web development</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vel tempore odio quas obcaecati nam dolores maxime natus rem asperiores libero blanditiis fuga velit culpa, mollitia nulla atque quasi explicabo.</p>
-            <div class="button">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vel tempore odio quas obcaecati nam dolores maxime natus rem asperiores libero blanditiis fuga velit culpa, mollitia nulla atque quasi explicabo.
+            </p>
+            <div class="btns">
                 <Btn url="#" name="read more"/>
             </div>
-        </article>
-        <article>
+        </div>
+        <div class="content">
             <i class="bx bxs-palette"></i>
             <h3><span>ui/ux</span> designing</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, saepe animi! Perferendis quos eaque adipisci accusantium, enim officiis non, consequuntur inventore eum explicabo, quasi rerum repudiandae facere tempore debitis amet.</p>
-            <div class="button">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, saepe animi! Perferendis quos eaque adipisci accusantium, enim officiis non, consequuntur inventore eum explicabo, quasi rerum repudiandae facere tempore debitis amet.
+            </p>
+            <div class="btns">
                 <Btn url="#" name="read more"/>
             </div>
-        </article>
-        <article>
+        </div>
+        <div class="content">
             <i class="bx bxl-android"></i>
             <h3>app development</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic dolorum sunt quas earum fuga in, dicta pariatur ratione sint et obcaecati fugit saepe natus dolore quasi possimus beatae dolores iste.</p>
-            <div class="button">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic dolorum sunt quas earum fuga in, dicta pariatur ratione sint et obcaecati fugit saepe natus dolore quasi possimus beatae dolores iste.
+            </p>
+            <div class="btns">
                 <Btn url="#" name="read more"/>
             </div>
-        </article>
-    </div>
+        </div>
+    </article>
 </section>
 
 <style>
-    .services{
-        /* background: var(--color-5); */
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
-    }
-    .content-services{
-        flex: 1;
+    .article{
         display: flex;
         flex-direction: column;
         gap: 1rem;
     }
-    article{
-        border-radius: 0.5rem;
-        border: 5px double rgba(3, 198, 252, 0.3);
+    .content{
+        border: 5px double var(--color-50);
+        border-radius: 1rem;
         padding: 1rem;
         i{
             font-size: 6rem;
@@ -60,29 +56,24 @@ import Btn from "../components/Btn.astro";
         }
         h3{
             font-weight: 300;
-            span{
-                text-transform: uppercase;
-            }
         }
-        p{
-            margin: 1rem 0;
-        }
-        transition: .3s ease-in-out;
     }
-    article:hover{
+    .content:hover{
         box-shadow: var(--box-shadow);
-    }
-    .button{
-        display: flex;
-        justify-content: center;
     }
 
     /* Medium devices (tablets, 768px and up) */
-    @media (min-width: 768px) {
-        .content-services{
-            flex: inherit;
-            flex-direction: row;
+    @media (min-width: 768px){
+        .article{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
         }
-       
     }
+    /* Large devices (desktops, 992px and up) */
+    /* @media (min-width: 992px){
+        .article{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    } */
 </style>
