@@ -1,0 +1,21 @@
+---
+
+import Chania from "../../../layouts/flexbox/examples/Chania.astro";
+import ResWeb from "../../../layouts/flexbox/examples/ResWeb.astro";
+import Gallery from "../../../layouts/flexbox/examples/Gallery.astro";
+import CssFlex from "../../../layouts/flexbox/examples/CssFlex.astro";
+import ResFlex from "../../../layouts/flexbox/examples/ResFlex.astro";
+import Layout from "../../../layouts/Layout.astro";
+const title = "Examples | FlexBox";
+const description = "Examples description";
+---
+
+<Layout title={title} description={description}>
+    <main class="examples">
+        <CssFlex></CssFlex>
+        <ResFlex></ResFlex>
+        <Gallery></Gallery>
+        <ResWeb></ResWeb>
+        <Chania></Chania>
+    </main>
+</Layout>

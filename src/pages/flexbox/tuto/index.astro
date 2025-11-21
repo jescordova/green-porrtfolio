@@ -1,0 +1,46 @@
+---
+
+import AlignContent from "../../../layouts/flexbox/tuto/AlignContent.astro";
+import AlignItems from "../../../layouts/flexbox/tuto/AlignItems.astro";
+import FlexWrap from "../../../layouts/flexbox/tuto/FlexWrap.astro";
+import FlexFlow from "../../../layouts/flexbox/tuto/FlexFlow.astro";
+import JustifyContent from "../../../layouts/flexbox/tuto/JustifyContent.astro";
+import FlexDirection from "../../../layouts/flexbox/tuto/FlexDirection.astro";
+import Layout from "../../../layouts/Layout.astro";
+import Order from "../../../layouts/flexbox/tuto/Order.astro";
+import FlexGrow from "../../../layouts/flexbox/tuto/FlexGrow.astro";
+import FlexShrink from "../../../layouts/flexbox/tuto/FlexShrink.astro";
+import FlexBasis from "../../../layouts/flexbox/tuto/FlexBasis.astro";
+import Flex from "../../../layouts/flexbox/tuto/Flex.astro";
+import AlignSelf from "../../../layouts/flexbox/tuto/AlignSelf.astro";
+
+const title  = "Basic-FlexBox";
+const description = "FlexBox basic principles";
+---
+
+<Layout title={title} description={description}>
+	<main class="css-flexbox">
+		<div class="title">
+			<h2>CSS Flex Container</h2>
+		</div>
+		<FlexDirection></FlexDirection>
+		<FlexWrap></FlexWrap>
+		<FlexFlow></FlexFlow>
+		<JustifyContent></JustifyContent>
+		<AlignItems></AlignItems>
+		<AlignContent></AlignContent>
+		<div class="title">
+			<h2>CSS Flex Items</h2>
+		</div>
+		<Order></Order>
+		<FlexGrow></FlexGrow>
+		<FlexShrink></FlexShrink>
+		<FlexBasis></FlexBasis>
+		<Flex></Flex>
+		<AlignSelf></AlignSelf>
+	</main>
+</Layout>
+
+<style>
+	
+</style>

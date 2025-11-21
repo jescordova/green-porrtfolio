@@ -1,0 +1,94 @@
+---
+import Layout from "../../layouts/Layout.astro";
+const title = "Flexbox - Menu";
+const description = "Description flexbox";
+---
+
+<Layout title={title} description={description}>
+    <main>
+        <section class="flexbox-menu" id="flexboxMenu">
+            <div class="title"></div>
+            <article class="article">
+                <div class="title"></div>
+                <div class="content">
+                    <ul class="nav">
+                        <li>
+                            <a href="/flexbox/tuto/">flexbox</a>
+                            <ul class="submenu">
+                                <li><a href="/flexbox/tuto/#flexDirection">.flex-direction</a></li>
+                                <li><a href="/flexbox/tuto/#flexWrap">.flex-wrap</a></li>
+                                <li><a href="/flexbox/tuto/#flexFlow">.flex-flow</a></li>
+                                <li><a href="/flexbox/tuto/#justifyContent">.justify-content</a></li>
+                                <li><a href="/flexbox/tuto/#alignItems">.align-items</a></li>
+                                <li><a href="/flexbox/tuto/#alignContent">.align-content</a></li>
+                                <li><a href="/flexbox/tuto/#order">.order</a></li>
+                                <li><a href="/flexbox/tuto/#flexGrow">.flex-grow</a></li>
+                                <li><a href="/flexbox/tuto/#flexShrink">.flex-shrink</a></li>
+                                <li><a href="/flexbox/tuto/#flexBasis">.flex-basis</a></li>
+                                <li><a href="/flexbox/tuto/#flex">.flex</a></li>
+                                <li><a href="/flexbox/tuto/#alignSelf">.align-self</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/flexbox/examples/">Examples</a>
+                            <ul class="submenu">
+                                <li>
+                                    <a href="/flexbox/examples/#cssFlex">Css FlexBox</a>
+                                </li>
+                                <li><a href="#">Sous-menu 2.2</a></li>
+                                <li><a href="#">Sous-menu 2.3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+    </main>
+</Layout>
+
+<style>
+    ul{
+        list-style: none;
+    }
+    .nav{
+        display: flex;
+        gap: 1rem;
+    }
+    .content .nav>li{
+        border: 1px solid red;
+    }
+    /* button{
+        background: none;
+    }
+    .nav {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav li {
+        position: relative;
+    }
+
+    .nav li a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+    }
+
+    .submenu {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .nav li:hover .submenu {
+        display: block;
+    }
+    .bx-plus, .bx-minus {
+        float: right;
+        margin-left: 5px;
+    } */
+</style>
