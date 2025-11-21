@@ -1,12 +1,88 @@
 ---
-
+import Btn from "../components/Btn.astro";
 ---
 
-<section class="contact" id="contact">contact</section>
+<section class="contact container" id="contact">
+    <header class="title">
+        <h2>contact <strong>us</strong></h2>
+    </header>
+    <article class="article">
+        <div class="content">
+            <p>A problem, a question, want to send us a message of love? Don’t hesitate to use this form to contact us!</p>
+            <form action="">
+                <ul>
+                    <li>
+                        <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                    </li>
+                    <li>
+                        <input type="email" id="email" name="email" placeholder="E-mail" required>
+                    </li>
+                    <li>
+                        <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+                    </li>
+                    <li>
+                        <input type="text" id="email" name="email" placeholder="E-mail Subject" required>
+                    </li>
+                    <li>
+                        <textarea id="message" name="message" placeholder="Message" required></textarea>
+                    </li>
+                </ul>
+                <div class="btns">
+                    <Btn url="#" name="submit"/>
+                </div>
+            </form>
+        </div>
+    </article>
+</section>
 
 <style>
-    .contact{
-        /* background-color: var(--color-1); */
-
+    section{
+        min-height: auto;
+    }
+    .content,
+    p{
+        border: 1px solid var(--color-70);
+        border-radius: 0.5rem;
+        padding: 1rem;
+    }
+    .content:hover{
+        box-shadow: var(--box-shadow);
+    }
+    ul{
+        display: flex;
+        flex-direction: column;
+    }
+    li{
+        flex: 100%;
+        margin-bottom: 0.5rem;
+        input,
+        textarea{
+            width: 100%;
+            border-radius: 0.5rem;
+            padding-left: 0.5rem;
+            line-height: 50px;
+        }
+        input:focus,
+        textarea:focus{
+            border-color: var(--color-default);
+        }
+        textarea{
+            vertical-align: top;
+            height: 10em;
+            resize: vertical;
+        }
+    }
+    /* Medium devices (tablets, 768px and up) */
+    @media (min-width: 768px){
+        ul{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: stretch;
+            gap: 0.5rem;
+        }
+        li{
+            flex: 40%;
+        }
     }
 </style>
