@@ -1,0 +1,73 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+const title = "Responsive Portfolio Two | Yasta Code";
+const description = "Responsive Portfolio Web Site example using Astro, CSS and JavaScript | Yasta Code";
+---
+
+<Layout>
+    <header>   
+
+        <h1>Mon Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#">À propos</a></li>
+                <li><a href="#">Projets</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="main">
+        <section class="about">
+            <h2>about</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iste molestiae porro a harum magnam dignissimos odit, dolorem fugiat quod molestias quasi sit sapiente facere! Inventore eveniet reiciendis dignissimos culpa?</p>
+        </section>
+        <section class="projects">
+            <h2>Mes Projets</h2>
+            <div class="project-card">
+                <img src="https://cdn.prod.website-files.com/63c5e29f1b5bc83fe0af2489/642b7ab9ab59d4bf26e05a52_Gantt%20Chart%20Online%20Software%20Clock%203.webp" alt="Projet 1"  width="200px">
+                <h3>Projet 1</h3>
+                <p>Description du projet 1.</p>
+                <a href="https://exemple.com">Voir le projet</a>
+            </div>
+        </section>
+        <section class="contact">contact
+        </section>
+
+    </div>
+</Layout>
+
+<style>
+    .main{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .about {
+        flex: 1 1 300px; /* Flex grow 1, flex shrink 1, flex basis 300px */
+        background-color: lightblue;
+        transition: all 0.3s ease-in-out;
+    }
+    .about:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    }
+    .projects {
+        flex: 2 1 400px;
+        background-color: lightgreen;
+    }
+    .contact {
+        flex: 1 1 300px;
+        background-color: lightpink;
+    }
+    .project-card {
+        border: 1px solid #ccc;
+        padding: 20px;
+        margin: 10px;
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .project-card:hover {
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        transform: scale(1.05);
+    }
+</style>

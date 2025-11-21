@@ -1,0 +1,52 @@
+---
+
+import Layout from "../../../layouts/Layout.astro";
+import Home from "../../../layouts/Home.astro";
+import About from "../../../layouts/About.astro";
+import Services from "../../../layouts/Services.astro";
+import Projects from "../../../layouts/Projects.astro";
+import Contact from "../../../layouts/Contact.astro";
+import Header from "../../../components/Header.astro";
+import SocialMedia from "../../../components/SocialMedia.astro";
+import Btn from "../../../components/Btn.astro";
+
+const title = "Responsive Portfolio One | Yasta Code";
+const description = "Responsive Portfolio Web Site example using Astro, CSS and JavaScript | Yasta Code";
+---
+
+<Layout title={title} description={description}>
+	<!-- <Header /> -->
+	<Home></Home>
+	<!-- <About></About> -->
+	<!-- <Services></Services> -->
+	<!-- <Projects></Projects> -->
+	<!-- <Contact></Contact> -->
+	<section class="parallax">
+		<div class="foreground">
+			<img src="image-foreground.jpg" alt="Premier plan">
+		</div>
+		<div class="background">
+			<img src="image-background.jpg" alt="Arrière-plan">
+		</div>
+	</section>
+</Layout>
+<style>
+	.parallax {
+  height: 500px; /* Ajustez la hauteur selon vos besoins */
+  overflow: hidden;
+}
+
+.parallax .background {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;   
+
+}
+
+.parallax .foreground {
+  position: relative;
+  z-index: 1;
+}
+</style>
+
