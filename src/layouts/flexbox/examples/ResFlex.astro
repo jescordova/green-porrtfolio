@@ -1,0 +1,56 @@
+---
+
+---
+
+<section class="res-flex container" id="resFlex">
+    <header class="title">
+        <h2>Responsive Flexbox</h2>
+        <p>In this example, we change the percentage of flex to create different layouts for different screen sizes.</p>
+    </header>
+    <article class="article">
+        <div class="content">
+            <div class="item">A</div>
+            <div class="item">B</div>
+        </div>
+    </article>
+</section>
+
+<style>
+    .res-flex{
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .article{
+        border: 1px solid var(--color-60);
+        border-radius: 0.5rem;
+        padding: 1rem;
+        flex: 1;
+        display: flex;
+    }
+    .content{
+        flex: 1;
+        display: flex;
+    }
+    .title{
+        padding: 1.5rem 0;
+    }
+    .item{
+        flex: 100%;
+        border: 1px solid var(--color-60);
+        padding: 1rem 1.5rem;
+        background: var(--color-70);
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    @media (max-width: 800px){
+        .content{
+            flex-direction: column;
+        }
+        .item{
+            flex: 50%;
+        }
+    }
+</style>

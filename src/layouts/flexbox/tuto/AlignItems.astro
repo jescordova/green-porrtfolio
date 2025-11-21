@@ -1,0 +1,106 @@
+---
+
+---
+
+<section class="align-item container" id="alignItem">
+    <div class="title">
+        <h3>The align-items Property</h3>
+        <p>The <span>align-items</span> property is used to align the flex items.</p>
+    </div>
+    <article class="article">
+        <div class="title">
+            <h4>align-items: flex-start <span>parent element container</span></h4>
+            <p>The <span>flex-start</span> value aligns the flex items at the top of the container:</p>
+        </div>
+        <div class="content start">
+            <div class="item">a</div>
+            <div class="item">b</div>
+            <div class="item">c</div>
+            <div class="item">d</div>
+            <div class="item">e</div>
+        </div>
+    </article>
+    <article class="article">
+        <div class="title">
+            <h4>align-items: center <span>parent element container</span></h4>
+            <p>The <span>center</span> value aligns the flex items in the middle of the container:</p>
+        </div>
+        <div class="content center">
+            <div class="item">a</div>
+            <div class="item">b</div>
+            <div class="item">c</div>
+            <div class="item">d</div>
+            <div class="item">e</div>
+        </div>
+    </article>
+    <article class="article">
+        <div class="title">
+            <h4>align-items: end <span>parent element container</span></h4>
+            <p>The <span>flex-end </span>value aligns the flex items at the bottom of the container:</p>
+        </div>
+        <div class="content end">
+            <div class="item">a</div>
+            <div class="item">b</div>
+            <div class="item">c</div>
+            <div class="item">d</div>
+            <div class="item">e</div>
+        </div>
+    </article>
+    <article class="article">
+        <div class="title">
+            <h4>align-items: stretch <span>parent element container</span></h4>
+            <p>The <span>stretch</span> value stretches the flex items to fill the container (this is default):</p>
+        </div>
+        <div class="content stretch">
+            <div class="item">a</div>
+            <div class="item">b</div>
+            <div class="item">c</div>
+            <div class="item">d</div>
+            <div class="item">e</div>
+        </div>
+    </article>
+    <article class="article">
+        <div class="title">
+            <h4>align-items: baseline <span>parent element container</span></h4>
+            <p>The <span>baseline</span> value aligns the flex items such as their baselines aligns:</p>
+        </div>
+        <div class="content baseline">
+            <div class="item">a</div>
+            <div class="item">b</div>
+            <div class="item">c</div>
+            <div class="item">d</div>
+            <div class="item">e</div>
+        </div>
+    </article>
+</section>
+
+<style>
+    .content{
+        height: 30vh;
+    }
+    .start{
+        align-items: start;
+    }
+    .center{
+        align-items: center;
+    }
+    .end{
+        align-items: end;
+    }
+    .baseline{
+        align-items: baseline;
+        height: auto;
+    }
+    .content.baseline .item:nth-of-type(1){
+        font-size: 3rem;
+        background: red;
+    }
+    .content.baseline .item:nth-of-type(3){
+        font-size: 1.5rem;
+        background: green;
+    }
+    .content.baseline .item:nth-of-type(5){
+        font-size: 0.7rem;
+        background: yellow;
+    }
+</style>

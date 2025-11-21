@@ -1,0 +1,92 @@
+---
+
+---
+
+<section class="gallery container" id="gallery">
+    <header class="title">
+        <h2>Responsive Image Gallery using Flexbox</h2>
+        <p>Use flexbox to create a responsive image gallery that varies between four, two or full-width images, depending on screen size:</p>
+    </header>
+    <article class="article row">
+        <div class="content column">
+            <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/falls2.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/mist.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
+        </div>
+        <div class="content column">
+            <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/ocean.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/mountainskies.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
+        </div>
+        <div class="content column">
+            <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/falls2.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/mist.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
+        </div>
+        <div class="content column">
+            <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/ocean.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/mountainskies.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
+        </div>
+    </article>
+</section>
+
+<style>
+    .gallery{
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .title{}
+    .article{
+        background: var(--color-90);
+        border: 1px solid var(--color-30);
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        overflow: hidden;
+        img{
+            border-radius: 0.3rem;
+            transition: .3s ease;
+        }
+        img:hover{
+            transform: scale(1.1);
+            filter: blur(3px);
+        }
+    }
+    
+    @media (min-width: 768px){
+        .content{
+            flex: 49%;
+            max-width: 50%;
+        }
+    }
+    @media (min-width: 992px){
+        .content{
+            flex: 24%;
+            max-width: 25%;
+        }
+    }
+</style>

@@ -1,0 +1,163 @@
+---
+
+---
+
+<section class="chania container" id="chania">
+    <header class="title">
+        <h2>Responsive Web Design</h2>
+        <p>Responsive web design makes your web page look good on all devices.</p>
+    </header>
+    <article class="article">
+        <div class="header">
+            <h3>Chania</h3>
+        </div>
+        <div class="main">
+            <div class="nav">
+                <a href="#">the flight</a>
+                <a href="#">the city</a>
+                <a href="#">the island</a>
+                <a href="#">the food</a>
+            </div>
+            <div class="section">
+                <div class="title">
+                    <h4>the city</h4>
+                </div>
+                <div class="content">
+                    <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
+                    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum exercitationem ab a ipsa tempore iste eligendi ducimus, aperiam tenetur architecto hic earum. Vel eligendi tempora quaerat amet blanditiis accusamus odio.</p> -->
+                </div>
+            </div>
+            <div class="side">
+                <div class="content">
+                    <h4>what?</h4>
+                    <p>Chania is a city on the island of Crete.</p>
+                </div>
+                <div class="content">
+                    <h4>where?</h4>
+                    <p>Crete is a Greek island in the Mediterranean Sea.</p>
+                </div>
+                <div class="content">
+                    <h4>how?</h4>
+                    <p>You can reach Chania airport from all over Europe.</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Resize the browser window to see how the content respond to the resizing.</p>
+        </div>
+    </article>
+</section>
+
+<style>
+    *{
+        color: inherit;
+    }
+    .chania{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    article{
+        background-color: #f1f1f1;
+        padding: 0.5rem;
+        /* color: #000; */
+    }
+    .header{
+        background: #9932CC;
+        padding: 30px 15px;
+        h3{
+            font-weight: 500;
+            text-align: left;
+        }
+
+    }
+    .main{
+        padding: 1rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .nav{
+        display: flex;
+        flex-direction: column;
+        gap: 0.1rem;
+        a{
+            background: #33B5E4;
+            text-transform: capitalize;
+            padding: 0.5rem 1rem;
+        }
+    }
+    .section{
+        color: #000;
+        margin: 2.5rem 0;
+        h4{
+            font-size: 2rem;
+            text-transform: capitalize;
+            margin: 2rem 0;
+            margin-bottom: 1rem;
+        }
+        .content{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+    }
+    .side{
+        background: #33B5E4;
+        text-align: center;
+        padding: 0.5rem;
+        .content{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            h4{
+                text-transform: capitalize;
+                padding: 2rem;
+                padding-bottom: 1rem;
+                font-size: 1.3rem;
+            }
+        }
+    }
+    .footer{
+        background: #33B5E4;
+        text-align: center;
+        padding: 1rem;
+    }
+    @media (min-width: 675px){
+        article{
+        }
+        .main{
+            flex-direction: row;
+            align-items: stretch;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        .nav{
+            flex-basis: 25%;
+        }
+        .section{
+            flex-basis: 65%;
+            margin: 0;
+            h4{
+                margin-top: 0.5rem;
+            }
+        }
+        .side{
+            flex-basis: 100%;
+        }
+    }
+    @media (min-width: 800px){
+        .main{
+            flex-wrap: nowrap;
+        }
+        .nav{
+            flex: 25%;
+        }
+        .section{
+            flex: 55%;
+            margin: 0;
+        }
+        .side{
+            flex: 20%;
+        }
+    }
+</style>

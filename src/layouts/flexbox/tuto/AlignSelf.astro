@@ -1,0 +1,41 @@
+---
+
+---
+
+<section class="section align-self container" id="alignSelf">
+    <div class="title">
+        <h3>The align-self Property</h3>
+        <p>The <span>align-self </span>property specifies the alignment for the selected item inside the flexible container.</p>
+        <p>The <span>align-self</span> property overrides the default alignment set by the container's <span>align-items</span> property.</p>
+    </div>
+    <article class="article">
+        <div class="title">
+            <h4>align-self: flex-start<span>Child Elements (Items)</span></h4>
+            <p>Align the third flex item in the middle of the container:</p>
+            <p>Align the second flex item at the top of the container, and the third flex item at the bottom of the container:</p>
+        </div>
+        <div class="content self">
+            <div class="item">a</div>
+            <div class="item">b</div>
+            <div class="item">c</div>
+            <div class="item">d</div>
+            <div class="item">e</div>
+        </div>
+    </article>
+</section>
+
+<style>
+    .content.self{
+        height: 40vh;
+    }
+    .content.self .item:nth-of-type(1){
+        align-self: flex-start;
+    }
+    .content.self .item:nth-of-type(3){
+        align-self: flex-end;
+    }
+    .content.self .item:nth-of-type(5){
+        align-self: center;
+    }
+    
+</style>

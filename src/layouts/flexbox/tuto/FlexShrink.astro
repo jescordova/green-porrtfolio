@@ -1,0 +1,34 @@
+---
+
+---
+
+<section class="section flex-shrink container" id="flexShrink">
+    <div class="title">
+        <h3>The flex-shrink Property</h3>
+        <p>The <span>flex-shrink</span> property specifies how much a flex item will shrink relative to the rest of the flex items.</p>
+    </div>
+    <article class="article">
+        <div class="title">
+            <h4>flex-shrink: n<span>Child Elements (Items)</span></h4>
+        </div>
+        <div class="content shrink">
+            <div class="item">a</div>
+            <div class="item">b</div>
+            <div class="item">c</div>
+            <div class="item">d</div>
+            <div class="item">e</div>
+        </div>
+    </article>
+</section>
+
+<style>
+
+    .content.shrink{
+        align-items: stretch;
+    }
+    .content.shrink .item:nth-of-type(3){
+        flex: 1;
+        flex-shrink: 0;
+    }
+    
+</style>

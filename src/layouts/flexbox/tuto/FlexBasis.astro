@@ -1,0 +1,33 @@
+---
+
+---
+
+<section class="section flex-basis container" id="flexBasis">
+    <div class="title">
+        <h3>The flex-basis Property</h3>
+        <p>The <span>flex-basis</span> property specifies the initial length of a flex item.</p>
+    </div>
+    <article class="article">
+        <div class="title">
+            <h4>flex-basis: n<span>Child Elements (Items)</span></h4>
+        </div>
+        <div class="content basis">
+            <div class="item">a</div>
+            <div class="item">b</div>
+            <div class="item">c</div>
+            <div class="item">d</div>
+            <div class="item">e</div>
+        </div>
+    </article>
+</section>
+
+<style>
+
+    .content.basis{
+        align-items: stretch;
+    }
+    .content.basis .item:nth-of-type(3){
+        flex-basis: 250px;
+    }
+    
+</style>

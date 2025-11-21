@@ -1,0 +1,36 @@
+---
+
+---
+
+<section class="section flex-grow container" id="flexGrow">
+    <div class="title">
+        <h3>The flex-grow Property</h3>
+        <p>The <span>flex-grow</span> property specifies how much a flex item will grow relative to the rest of the flex items.</p>
+    </div>
+    <article class="article">
+        <div class="title">
+            <h4>flex-grow : n<span>Child Elements (Items)</span></h4>
+        </div>
+        <div class="content grow">
+            <div class="item">a</div>
+            <div class="item">b</div>
+            <div class="item">c</div>
+            <div class="item">d</div>
+            <div class="item">e</div>
+        </div>
+    </article>
+</section>
+
+<style>
+    .grow{
+        .item:nth-of-type(1){
+            flex-grow: 1;
+        }
+        .item:nth-of-type(3){
+            flex-grow: 3;
+        }
+        .item:nth-of-type(5){
+            flex-grow: 8;
+        }
+    }
+</style>

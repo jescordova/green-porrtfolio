@@ -1,0 +1,242 @@
+---
+
+---
+
+<section class="align-content container" id="alignContent">
+    <div class="title">
+        <h3>The align-content Property</h3>
+        <p>The <span>align-content</span> property is used to align the flex lines.</p>
+    </div>
+    <article class="article">
+        <div class="title">
+            <h4>align-content : start<span>parent element container</span></h4>
+            <p>The <span>flex-start </span>value displays the flex lines at the start of the container:</p>
+        </div>
+        <div class="content start">
+            <div class="item">a</div>
+            <div class="item">b</div>
+            <div class="item">c</div>
+            <div class="item">d</div>
+            <div class="item">e</div>
+            <div class="item">f</div>
+            <div class="item">g</div>
+            <div class="item">h</div>
+        </div>
+    </article>
+    <article class="article">
+        <div class="title">
+            <h4>align-content : center<span>parent element container</span></h4>
+            <p>The <span>center</span> value displays the flex lines in the middle of the container:</p>
+        </div>
+        <div class="content center">
+            <div class="item">a</div>
+            <div class="item">b</div>
+            <div class="item">c</div>
+            <div class="item">d</div>
+            <div class="item">e</div>
+            <div class="item">f</div>
+            <div class="item">g</div>
+            <div class="item">h</div>
+        </div>
+    </article>
+    <article class="article">
+        <div class="title">
+            <h4>align-content : flex-end <span>parent element container</span></h4>
+            <p>The <span>flex-end </span>value displays the flex lines at the end of the container:</p>
+        </div>
+        <div class="content end ">
+            <div class="item">a</div>
+            <div class="item">b</div>
+            <div class="item">c</div>
+            <div class="item">d</div>
+            <div class="item">e</div>
+            <div class="item">f</div>
+            <div class="item">g</div>
+            <div class="item">h</div>
+        </div>
+    </article>
+    <article class="article">
+        <div class="title">
+            <h4>align-content : space-between <span>parent element container</span></h4>
+            <p>The <span>space-between</span> value displays the flex lines with equal space between them:</p>
+        </div>
+        <div class="content space-between ">
+            <div class="item">a</div>
+            <div class="item">b</div>
+            <div class="item">c</div>
+            <div class="item">d</div>
+            <div class="item">e</div>
+            <div class="item">f</div>
+            <div class="item">g</div>
+            <div class="item">h</div>
+        </div>
+    </article>
+    <article class="article">
+        <div class="title">
+            <h4>align-content : space-around <span>parent element container</span></h4>
+            <p>The <span>space-around</span> value displays the flex lines with space before, between, and after them:</p>
+        </div>
+        <div class="content space-around">
+            <div class="item">a</div>
+            <div class="item">b</div>
+            <div class="item">c</div>
+            <div class="item">d</div>
+            <div class="item">e</div>
+            <div class="item">f</div>
+            <div class="item">g</div>
+            <div class="item">h</div>
+        </div>
+    </article>
+    <article class="article">
+        <div class="title">
+            <h4>align-content : stretch <span>parent element container</span></h4>
+            <p>The <span>stretch</span> value stretches the flex lines to take up the remaining space (this is default):</p>
+        </div>
+        <div class="content stretch">
+            <div class="item">a</div>
+            <div class="item">b</div>
+            <div class="item">c</div>
+            <div class="item">d</div>
+            <div class="item">e</div>
+            <div class="item">f</div>
+            <div class="item">g</div>
+            <div class="item">h</div>
+        </div>
+    </article>
+</section>
+
+<style>
+    .content{
+        height: 70vh;
+        flex-wrap: wrap;
+    }
+    .content .item{
+        flex: 1 200px;
+    }
+    .start{
+        align-content: start;
+    }
+    .center{
+        align-content: center;
+    }
+    .end{
+        align-content: end;
+    }
+    .space-between{
+        align-content: space-between;
+    }
+    .space-around{
+        align-content: space-around;
+    }
+    .stretch{
+        align-content: stretch;
+    }
+</style>
+
+<!-- <section class="flex-tuto" id="flexTuto">
+    <article class="align-content">
+        <div class="title-flex">
+            <h4>align-content: <span>start</span><span>container</span></h4>
+            <p></p>
+        </div>
+        <div class="content start">
+            <div class="item">a</div>
+            <div class="item">b</div>
+            <div class="item">c</div>
+            <div class="item">d</div>
+            <div class="item">e</div>
+        </div>
+    </article>
+    <article class="align-content">
+        <div class="title-flex">
+            <h4>align-content: <span>center</span><span>container</span></h4>
+            <p></p>
+        </div>
+        <div class="content center">
+            <div class="item">a</div>
+            <div class="item">b</div>
+            <div class="item">c</div>
+            <div class="item">d</div>
+            <div class="item">e</div>
+        </div>
+    </article>
+    <article class="align-content">
+        <div class="title-flex">
+            <h4>align-content: <span>end</span><span>container</span></h4>
+            <p></p>
+        </div>
+        <div class="content end">
+            <div class="item">a</div>
+            <div class="item">b</div>
+            <div class="item">c</div>
+            <div class="item">d</div>
+            <div class="item">e</div>
+        </div>
+    </article>
+    <article class="align-content">
+        <div class="title-flex">
+            <h4>align-content: <span>stretch</span><span>container</span></h4>
+            <p></p>
+        </div>
+        <div class="content stretch">
+            <div class="item">a</div>
+            <div class="item">b</div>
+            <div class="item">c</div>
+            <div class="item">d</div>
+            <div class="item">e</div>
+        </div>
+    </article>
+    <article class="align-content">
+        <div class="title-flex">
+            <h4>align-content: <span>space-between</span><span>container</span></h4>
+            <p></p>
+        </div>
+        <div class="content space-between">
+            <div class="item">a</div>
+            <div class="item">b</div>
+            <div class="item">c</div>
+            <div class="item">d</div>
+            <div class="item">e</div>
+        </div>
+    </article>
+    <article class="align-content">
+        <div class="title-flex">
+            <h4>align-content: <span>space-around</span><span>container</span></h4>
+            <p></p>
+        </div>
+        <div class="content space-around">
+            <div class="item">a</div>
+            <div class="item">b</div>
+            <div class="item">c</div>
+            <div class="item">d</div>
+            <div class="item">e</div>
+        </div>
+    </article>
+</section>
+
+<style>
+    .content{
+        height: 60vh;
+        .item{
+            flex: 1 200px;
+        }
+    }
+    .start{
+        align-content: start;
+    }
+    .center{
+        align-content: center;
+    }
+    .end{
+        align-content: end;
+    }
+    .stretch{
+        align-content: stretch;
+    }
+    .space-between{
+        align-content: space-between;
+    }
+    .space-around{
+        align-content: space-around;
+    }
+</style> -->

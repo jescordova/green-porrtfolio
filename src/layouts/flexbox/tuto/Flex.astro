@@ -1,0 +1,33 @@
+---
+
+---
+
+<section class="section flex container" id="flex">
+    <div class="title">
+        <h3>The flex Property</h3>
+        <p>The <span>flex</span> property is a shorthand property for the <span>flex-grow</span>, <span>flex-shrink</span>, and <span>flex-basis</span> properties.</p>
+    </div>
+    <article class="article">
+        <div class="title">
+            <h4>flex: flex-grow, flex-shrink, flex-basis<span>Child Elements (Items)</span></h4>
+        </div>
+        <div class="content flex">
+            <div class="item">a</div>
+            <div class="item">b</div>
+            <div class="item">c</div>
+            <div class="item">d</div>
+            <div class="item">e</div>
+        </div>
+    </article>
+</section>
+
+<style>
+
+    .content.flex{
+        align-items: stretch;
+    }
+    .content.flex .item:nth-of-type(4){
+        flex: 0 0 300px;
+    }
+    
+</style>

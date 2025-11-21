@@ -1,0 +1,205 @@
+---
+const platform = "github";
+const username = "withastro";
+---
+
+<section class="port-one" id="portOne">
+    <article class="container">
+        <nav>
+            <div class="logo">
+                <a href="#"><i class='bx bxs-leaf'></i> port one</a>
+            </div>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">home</a></li>
+                <li><a href="#">about me</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header">
+            <div class="img-header">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Icons8_flat_grid.svg/480px-Icons8_flat_grid.svg.png" alt="Img Header">
+
+            </div>
+            <div class="article-header">
+                <h1>Flexbox Crash Cours</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quae delectus quos, consequatur esse dolorum voluptatibus ex, voluptates voluptatum libero magni dolores inventore deleniti debitis.</p>
+            </div>
+        </div>
+        <div class="main">
+            <div class="section">
+                <div class="article">
+                    <div class="box">
+                        <h2><i class='bx bx-vertical-center' ></i> Alignement & Space</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, eligendi?</p>
+                    </div>
+                    <div class="box">
+                        <h2><i class='bx bx-move'></i> Tricky Positioning</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, eligendi?</p>
+                    </div>
+                    <div class="box">
+                        <h2><i class='bx bx-mobile-alt'></i> Responsive Design</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, eligendi?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+              <p>Learn more about my projects on <a href={`https://www.${platform}.com/${username}`}>{platform}</a> !</p>
+        </div>
+    </article>
+</section>
+
+<style>
+    .port-one{
+        background: var(--color-90);
+        padding: 1rem;
+    }
+    .container{
+        background: var(--color-80);
+        padding: 1rem;
+        border-radius: 0.5rem;
+    }
+    nav{
+        /* background: var(--color-70); */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        .logo{
+            a{
+                text-transform: uppercase;
+                display: flex;
+                align-items: center;
+                gap: 0.2rem;
+                i{
+                    font-size: 1.9rem;
+                    color: var(--color-10);
+                }
+            }
+        }
+        .hamburger{
+            cursor: pointer;
+            .line{
+                background: var(--color-09);
+                width: 25px;
+                height: 5px;
+                margin: 3px 0;
+                transition: .3s ease;
+            }
+        }
+        .hamburger:hover{
+            .line{
+                background: var(--color-10);
+            }
+        }
+        .nav-links{
+            flex: 100%;
+            text-align: center;
+            margin-top: 0.5rem;
+            display: none;
+            li{
+                background: var(--color-70);
+                padding: 0.5rem 1rem;
+                margin-top: 0.1rem;
+                a{
+                    text-transform: capitalize;
+                }
+                a:hover{
+                    color: var(--color-05);
+                }
+            }
+            li:hover{
+                background: var(--color-60);
+            }
+        }
+        
+    }
+    .expanded {
+        display: unset;
+    }
+    .header{
+        display: flex;
+        /* flex-wrap: wrap; */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .img-header{
+            flex: 1;
+            max-width: 350px;
+            img{
+                width: 100%;
+            }
+        }
+        .article-header{
+            flex: 1;
+            text-align: center;
+            padding: 1rem;
+            h1{
+                font-size: 2.5rem;
+            }
+        }
+    }
+    .article{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        .box{
+            background: var(--color-60);
+            border: 1px solid var(--color-08);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            h2{
+                text-align: center;
+                font-size:2rem;
+                font-weight: 300;
+            }
+            p{
+                text-align: center;
+            }
+        }
+    }
+    .footer{
+        background: var(--color-90);
+        padding: 1.5rem;
+        margin-top: 1.5rem;
+        p{
+            text-align: center;
+            a{
+                color: var(--color-10);
+            }
+        }
+    }
+    @media(min-width: 768px){
+        .header{
+            flex-direction: row;
+            .img-header{
+                order: 2;
+            }
+        }
+        nav{
+            flex-wrap: nowrap;
+        }
+        .nav-links{
+            flex: inherit;
+            display: block;
+            /* position: static; */
+            /* justify-content: end;
+            gap: 0.1rem; */
+            background: transparent;
+        }
+        .nav-links a {
+    display: inline-block;
+    padding: 15px 20px;
+  }
+        .hamburger{
+            display: none;
+        }
+    }
+</style>

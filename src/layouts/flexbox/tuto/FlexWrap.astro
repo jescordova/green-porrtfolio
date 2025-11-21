@@ -1,0 +1,70 @@
+---
+
+---
+
+<section class="flex-wrap container" id="flexWrap">
+    <div class="title">
+        <h3>The flex-wrap Property</h3>
+        <p>The <span>flex-wrap </span>property specifies whether the flex items should wrap or not.</p>
+    </div>
+    <article class="article">
+        <div class="title">
+            <h4>flex-wrap : wrap <span>parent element container</span></h4>
+            <p>The <span>wrap</span> value specifies that the flex items will wrap if necessary:</p>
+        </div>
+        <div class="content wrap">
+            <div class="item">a</div>
+            <div class="item">b</div>
+            <div class="item">c</div>
+            <div class="item">d</div>
+            <div class="item">e</div>
+            <div class="item">f</div>
+            <div class="item">g</div>
+            <div class="item">h</div>
+        </div>
+    </article>
+    <article class="article">
+        <div class="title">
+            <h4>flex-wrap : nowrap <span>parent element container</span></h4>
+            <p>The <span>nowrap</span> value specifies that the flex items will not wrap (this is default):</p>
+        </div>
+        <div class="content nowrap">
+            <div class="item">a</div>
+            <div class="item">b</div>
+            <div class="item">c</div>
+            <div class="item">d</div>
+            <div class="item">e</div>
+            <div class="item">f</div>
+            <div class="item">g</div>
+            <div class="item">h</div>
+        </div>
+    </article>
+    <article class="article">
+        <div class="title">
+            <h4>flex-wrap : wrap-reverse  <span>parent element container</span></h4>
+            <p>The <span>wrap-reverse </span>value specifies that the flexible items will wrap if necessary, in reverse order:</p>
+        </div>
+        <div class="content wrap-reverse ">
+            <div class="item">a</div>
+            <div class="item">b</div>
+            <div class="item">c</div>
+            <div class="item">d</div>
+            <div class="item">e</div>
+            <div class="item">f</div>
+            <div class="item">g</div>
+            <div class="item">h</div>
+        </div>
+    </article>
+</section>
+
+<style>
+    .wrap{
+        flex-wrap: wrap;
+    }
+    .nowrap{
+        flex-wrap: nowrap;
+    }
+    .wrap-reverse {
+        flex-wrap: wrap-reverse;
+    }
+</style>
