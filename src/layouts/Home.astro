@@ -3,104 +3,101 @@ import SocialMedia from "../components/SocialMedia.astro";
 import Btn from "../components/Btn.astro";
 ---
 
-<section class="home" id="home">
-    <div class="header-home">
-        <div class="user-img">
-            <img src="petros.svg" alt="User Image">
+<section class="home container" id="home">
+    <header class="picture">
+        <img src="/user.jpg" alt="User Image">
+    </header>
+    <article class="article">
+        <div class="title">
+            <h1>
+                <span>Hi, Myself</span>
+                <span>Petros <strong>Córdova</strong></span>
+            </h1>
+            <h2>
+                <span>And I'm a</span> 
+                <span><strong>Front-End</strong> Developer</span>
+            </h2>
         </div>
-    </div>
-    <div class="content-home">
-        <h1>
-            <span>Hi, Myself</span>
-            <span>Petros <strong>Córdova</strong> </span>
-            <span>And I'm a <strong>Front-End</strong> Developer</span>
-        </h1>
-        <p>
-            Passionate about user experience, I create intuitive, aesthetic and responsive web interfaces. My skills: <strong>HTML5</strong>, <strong>CSS3</strong>, <strong>JavaScript</strong>, <strong>Astro</strong>, <strong>Vue</strong>. I like taking on new challenges and collaborating with creative teams.
-        </p>
-        <!-- social media buttons component -->
-        <div class="media">
-            <SocialMedia />
+        <div class="content">
+            <p>
+                Passionate about user experience, I create intuitive, aesthetic and responsive web interfaces. My skills: <span>HTML5</span>, <span>CSS3</span>, <span>JavaScript</span>, <span>Astro</span>, <span>Vue</span>. I like taking on new challenges and collaborating with creative teams.
+            </p>
+            <div class="btns">
+                <SocialMedia />
+                <Btn url="#" name="download CV" icon="downvote"/>
+            </div>
         </div>
-        <!-- Download button component -->
-        <div class="button">
-            <Btn url="#" name="download CV" icon="downvote"/>
-        </div>
-    </div>
+    </article>
 </section>
 
 <style>
-    .home{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
-    }
-    .header-home{
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .user-img{
-        flex: 1;
-        width: 300px;
-        border: 4px double var(--color-default);
-        border-radius: 100%;
-        padding: 0.5rem;
-        display: flex;
-        animation: floatImg 4s ease-in-out infinite;
-        box-shadow: var(--box-shadow);
+    .picture {
+        margin-top: 5rem;
     }
     img{
-        width: 100%;
-        border-radius: 100%;
-        border: 2rem solid #ffffff;
+        border-radius: 50%;
+        border: 1rem solid #fff;
+        box-shadow: var(--box-shadow);
+        width: 300px;
+        animation: floatImg 4s ease-in-out infinite;
     }
-    .content-home{
-        flex: 2;
-        text-align: center;
-        h1{
+    .title{
+        h1,
+        h2{
             display: flex;
             flex-direction: column;
-            justify-content: start;
-            align-items: center;
             span:first-child{
-                font-size: 2rem;
-            }
-            span:last-child{
-                text-transform: uppercase;
-                font-size: 1.3rem;
+                font-size: 1.2rem;
+                font-weight: 100;
+                text-transform: initial;
             }
         }
-        p{
-            margin: 1rem 0;
+        h1{
+            font-size: 3rem;
+            strong{
+                color: var(--color-default);
+            }
+        }
+        h2{
+            font-size: 1.5rem;
+            text-transform: uppercase;
         }
     }
-	@keyframes floatImg{
+    p{
+        padding: 0 2rem;
+    }
+
+    @keyframes floatImg{
         0% {transform: translateY(0);}
-        50% {transform: translateY(-2.4rem);}
+        50% {transform: translateY(-1.8rem);}
         100% {transform: translateY(0);}
-    }
-    /* Medium devices (tablets, 768px and up) */
-    @media (min-width: 768px) {
+    } 
+    
+    /* Large devices (desktops, 992px and up) */
+    @media (min-width: 992px){
         .home{
+            display: flex;
             flex-direction: row;
-            padding: 1rem 2rem;
+            justify-content: space-between;
+            align-items: center;
         }
-        .header-home{
+        .picture{
             order: 2;
+            flex: 1;
+            text-align: right;
+            img{
+                width: 100%;
+            }
         }
-        .content-home{
+        .article{
+            flex: 2;
             order: 1;
             text-align: left;
-            h1{
-                align-items: start;
+            p{
+                padding-left: 0;
             }
-            .media,
-            .button{
-                justify-content: start;
+            .btns{
+                align-items: start;
             }
         }
     }
